@@ -1,4 +1,3 @@
-// Body.js
 import React from 'react';
 
 const Body = ({ currentLanguage }) => {
