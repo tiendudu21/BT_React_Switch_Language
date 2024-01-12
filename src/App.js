@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from 'react';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import Footer from './components/Footer';
