@@ -1,4 +1,3 @@
-echo "# BT_React_Switch_Language" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
