@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import LanguageSwitcher from './components/LanguageSwitcher';
+import Footer from './components/Footer';
+import Body from './components/Body';
 
-function App() {
+const App = () => {
+  const [currentLanguage, setCurrentLanguage] = useState('vi');
+
+  const changeLanguage = (lang) => {
+    setCurrentLanguage(lang);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="wrapper">
+      <LanguageSwitcher
+        languages={['vi', 'en']}
+        onLanguageChange={changeLanguage}
+        currentLanguage={currentLanguage} 
+      />
+      <Body currentLanguage={currentLanguage} />
+      <Footer currentLanguage={currentLanguage} />
     </div>
   );
-}
+};
 
 export default App;
